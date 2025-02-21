@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fan_background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp"
+        tools:context=".MainActivity">
+
+        <!-- Temperature Display -->
+        <TextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature: -- °C"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"/>
+
+        <!-- Fan Speed Control -->
+        <SeekBar
+            android:id="@+id/seekFanSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="5"/>
+
+        <TextView
+            android:id="@+id/tvFanSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fan Speed: 0"
+            android:textSize="18sp"/>
+
+        <!-- Control Buttons -->
+        <Button
+            android:id="@+id/btnSwing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Swing" />
+
+        <Button
+            android:id="@+id/btnBoost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Boost Fan Speed"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turn ON"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turn OFF"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Timer (Optional) -->
+        <Button
+            android:id="@+id/btnSetTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Timer"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
